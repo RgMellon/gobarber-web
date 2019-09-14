@@ -33,7 +33,7 @@ export const NotificationList = styled.div`
   left: calc(50% - 130px);
   background: rgba(0, 0, 0, 0.6);
   border-radius: 4px;
-  padding: 20px;
+  padding: 15px 5px;
 
   &::before {
     content: '';
@@ -46,10 +46,13 @@ export const NotificationList = styled.div`
     border-right: 20px solid transparent;
     border-bottom: 20px solid rgba(0, 0, 0, 0.6);
   }
+
+  display: ${props => (props.visible ? 'block' : 'none')};
 `;
 
-export const Scroll = styled(PerfectScrollbar)`
+export const ScrollBar = styled(PerfectScrollbar)`
   max-height: 260px;
+  padding: 5px 15px;
 `;
 
 export const Notification = styled.div`
